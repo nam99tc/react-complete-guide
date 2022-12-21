@@ -5,42 +5,31 @@ import NewExpense from "./components/NewExpense/NewExpense";
 
 const listsExpenses = [
   {
-    id: "id1",
-    title: "Vina",
-    amount: 453.2,
-    date: new Date(2012, 12, 30),
+    id: "e1",
+    title: "Toilet Paper",
+    amount: 94.12,
+    date: new Date(2020, 7, 14),
+  },
+  { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
+  {
+    id: "e3",
+    title: "Car Insurance",
+    amount: 294.67,
+    date: new Date(2021, 2, 28),
   },
   {
-    id: "id2",
-    title: "Hello Hola",
-    amount: 233.2,
-    date: new Date(2012, 11, 10),
-  },
-  {
-    id: "id1",
-    title: "Vina",
-    amount: 453.2,
-    date: new Date(2012, 12, 30),
-  },
-  {
-    id: "id2",
-    title: "Hello Hola",
-    amount: 233.2,
-    date: new Date(2012, 11, 10),
+    id: "e4",
+    title: "New Desk (Wooden)",
+    amount: 450,
+    date: new Date(2021, 5, 12),
   },
 ];
 const App = () => {
-
   const [expenses, setExpenses] = useState(listsExpenses);
-  
   const addExpenseHandler = (expense) => {
     setExpenses((preExpenses) => {
       return [expense, ...preExpenses];
     });
-    console.log(expense);
-    console.log(expenses);
-    console.log(setExpenses);
-    console.log(listsExpenses);
   };
 
   return (
